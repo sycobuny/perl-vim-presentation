@@ -1,0 +1,1 @@
+    - "compatible" mode tries to act like vanilla `vi`

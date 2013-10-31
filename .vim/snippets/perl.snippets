@@ -1,0 +1,43 @@
+snippet newpkg
+	{ package ${1:Package::Name}; $VERSION = ${2:CURRENT_VERSION};
+	    use warnings;
+	    use strict;
+
+	    __PACKAGE__
+	}
+
+	__END__
+
+	=pod
+
+	=head1 NAME
+
+	$1 - Enter a one-line description of your module here
+
+	=head1 VERSION
+
+	$2
+
+	=head1 SYNOPSIS
+
+	    # enter some example code here to summarize
+
+	=head1 DESCRIPTION
+
+	Describe your module in detail here
+
+	=head1 METHODS
+
+	=head3 C<method_name>
+
+	    # brief descriptive use of the method
+
+	Description of the method, what it takes, returns, etc.
+
+	=head1 AUTHOR
+
+	`system('git config user.name')`
+
+	=head1 COPYRIGHT AND LICENSE
+
+	=cut

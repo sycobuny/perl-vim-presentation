@@ -1,0 +1,1 @@
+    - `vim -u myvimrc.vim` - Start with *only* `myvimrc`'s settings

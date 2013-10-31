@@ -1,0 +1,4 @@
+.DS_Store
+.viminfo
+slides/current-slide.md
+.vim/bundle
