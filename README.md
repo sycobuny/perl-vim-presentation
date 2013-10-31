@@ -98,7 +98,7 @@ move forward.
 Actually, that wasn't so bad. Oh, you might want to jump around and edit
 different sections. Unfortunately, this currently requires a bit of knowledge
 about where in the script you are and where in the script you want to go. You
-can fairly easily tell where you *are* by typing `<Leader>c`4 in your
+can fairly easily tell where you *are* by typing `<Leader>c` in your
 controller session. But, telling where you're going is trickier. For now,
 you'll probably just have to count backwards from your current cue. (See? I
 told you it would be easier if you had the file loaded in a buffer!)
@@ -157,6 +157,8 @@ Style
     so hideously (see slides/05-about-vimrc/ for an example).
   * Make it possible to "animate" the addition of new material on slides
   * Make the syntax highlighting preference stick to all sessions
+  * Add "image" support, if possible (background image settings in [iTerm2][],
+    for instance)
 
 Substance
 ---------
@@ -167,13 +169,17 @@ Substance
     and [SyntaxRange][].
   * Write a notes file to be (optionally) distributed with this presentation
     as supplemental materials.
+  * Write a skeleton verbal script to give at least a framework for what will
+    be discussed during the presentation. The slides ought to be
+    self-explanatory, but the demo at the end; not as much. This may also
+    improve accessibility for the hearing-impaired.
 
 Author
 ======
 
 Stephen Belcher
 
-  * [GitHub][] ([Resume][])
+  * [GitHub][]
   * [Twitter][]
 
 Copyright and License
@@ -218,7 +224,6 @@ THE SOFTWARE.
 [snipMate]:     https://github.com/msanders/snipmate.vim
 
 [GitHub]:  https://github.com/sycobuny
-[Resume]:  https://github.com/sycobuny/resume
 [Twitter]: https://twitter.com/sycobuny
 
 [MIT License]: http://opensource.org/licenses/MIT
