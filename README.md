@@ -167,6 +167,8 @@ Substance
     during the presentation.
   * Cover the other plugins required by `.vimrc`. This includes [Syntastic][]
     and [SyntaxRange][].
+  * Put in a slide describing which Perl binary is used for embedded
+    scripting.
   * Write a notes file to be (optionally) distributed with this presentation
     as supplemental materials.
   * Write a skeleton verbal script to give at least a framework for what will
