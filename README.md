@@ -212,10 +212,11 @@ THE SOFTWARE.
 
 ----
 
-[VIM]:  http://www.vim.org/
-[Perl]: http://www.perl.org/
-[tmux]: http://tmux.sourceforge.net/
-[git]:  http://git-scm.com/
+[VIM]:    http://www.vim.org/
+[Perl]:   http://www.perl.org/
+[tmux]:   http://tmux.sourceforge.net/
+[git]:    http://git-scm.com/
+[iTerm2]: http://www.iterm2.com/#/section/home
 
 [Vundle]:       https://github.com/gmarik/vundle
 [Syntastic]:    https://github.com/scrooloose/syntastic
