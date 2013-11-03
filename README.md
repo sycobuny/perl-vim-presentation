@@ -14,7 +14,7 @@ Requirements
 Of Course
 ---------
 
-  * [VIM][]
+  * [VIM][] (with Perl support build flags)
   * [Perl][]
 
 Not As Obvious
