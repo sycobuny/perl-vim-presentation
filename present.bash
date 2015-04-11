@@ -3,7 +3,7 @@
 # find out where this script is living to pretend it's ~. this both pretties
 # up our display and tricks vim into using the project-local .vimrc *only*,
 # for consistent "look and feel".
-root=$(dirname "$BASH_SOURCE")
+root=$(cd "$(dirname "$BASH_SOURCE")" && pwd)
 
 # set some environment variables to make display prettier. this mostly works
 # well with oh-my-zsh themes like "cloud".
