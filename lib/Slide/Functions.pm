@@ -19,12 +19,7 @@
 
         # special case for single-quotes
         if ($char eq "'") {
-            # this is a hack because it keeps seeming to break no matter the
-            # number of different ways I escape the quote character, so we're
-            # just skipping straight to running tmux ourselves.
-            `tmux send-keys -t presentation:0.0 -l "$char"`;
-
-            # VIM::DoCommand("call SendChar('''')");
+            VIM::DoCommand("call SendChar('''')");
         }
         else {
             VIM::DoCommand("call SendChar('$char')")
