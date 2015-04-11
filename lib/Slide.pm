@@ -54,6 +54,11 @@
         speed => 'slow',
     };
 
+    use constant DEFAULT_CODE_ACTION => {
+        spacer_before => 1,
+        spacer_after  => 1,
+    };
+
     use constant BULLETS => [ qw(* - +) ];
 
     ##
@@ -159,6 +164,26 @@
 
                 $text = INSERT. "$space$char $text" . ENTER . ESC;
                 $add->(sub { rightnow($text) });
+            }
+            elsif ($action->{type} eq 'code') {
+                $action = { %{ &DEFAULT_CODE_ACTION }, %{ $action } };
+
+                $add->(sub {
+                    rightnow(':set paste' . ENTER);
+                    rightnow(INSERT);
+                    rightnow(ENTER x $action->{spacer_before});
+                    rightnow('```' . $action->{lang} . ENTER);
+
+                    foreach my $line (@{ $action->{lines} }) {
+                        rightnow($line . ENTER);
+                    }
+
+                    rightnow('```' . ENTER);
+                    rightnow(ENTER x $action->{spacer_after});
+
+                    rightnow(ESC);
+                    rightnow(':set nopaste' . ENTER);
+                })
             }
         }
     }
