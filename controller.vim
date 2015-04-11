@@ -23,6 +23,9 @@ perl <<
     # " and again for backslashes, for the same reason as above
     if ($char eq '\\') { $char = '\\\\' }
 
+    # " and (hopefully) one last time for backticks
+    if ($char eq '`') { $char = '\`' }
+
     # " send the key along to tmux
     `tmux send-keys -t presentation:0.0 -l "$char"`;
 .
