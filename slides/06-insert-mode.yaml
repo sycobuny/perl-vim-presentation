@@ -1,0 +1,9 @@
+---
+type: file
+position: 6
+actions:
+    - i
+    - "\e"
+    - i
+    - print "Hello, Vim\n";
+    - "\e"
