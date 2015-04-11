@@ -4,7 +4,6 @@ set nowb
 set noswapfile
 
 " ensure 4 spaces for tabs with auto-indenting
-set smartindent
 set tabstop=4
 set shiftwidth=4
 set expandtab
