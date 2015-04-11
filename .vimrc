@@ -3,12 +3,6 @@
 set nowb
 set noswapfile
 
-" ensure 4 spaces for tabs with auto-indenting
-set tabstop=4
-set shiftwidth=4
-set expandtab
-set backspace=indent,eol,start
-
 " we'll assume we like syntax highlighting until proven otherwise
 syntax enable
 hi NonText ctermfg=black
@@ -16,14 +10,8 @@ hi NonText ctermfg=black
 " give us a gutter to warn us of approaching boundaries, or highlight
 " over-long lines, whichever this version of vim supports
 set textwidth=78
-if exists('+colorcolumn')
-    set colorcolumn=+1
-else
-    let s:colpat = '\%>' . (&textwidth + 1) . 'v.\+'
-    au BufWinEnter * let w:m2=matchadd('ErrorMsg', s:colpat, -1)
-endif
 
-au FileType *        set foldcolumn=0
+au FileType *        set foldcolumn=2
 au FileType markdown set foldcolumn=8
 
 au FileType *        hi ColorColumn term=reverse ctermbg=1
