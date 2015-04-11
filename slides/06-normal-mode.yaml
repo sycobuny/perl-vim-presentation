@@ -1,0 +1,18 @@
+---
+type: file
+position: 3
+actions:
+    - jjjj
+    - k$hh
+    - ^w
+    - {speed: fast, text: ':normal dw'}
+    - "\n"
+    - "isay \e"
+    - {speed: fast, text: ':normal u'}
+    - "\n"
+    - "u"
+    - {speed: fast, text: ':normal cw'}
+    - "\n isay\e"
+    - "\ejjj^"
+    - {speed: fast, text: ':normal dd'}
+    - "\n"
