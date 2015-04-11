@@ -1,0 +1,10 @@
+---
+type: information
+title: Frameworks: Vundle and Pathogen
+actions:
+    - Both assume git to manage versions
+    - Pathogen has simplified config
+    - {level: 2, text: "But assumes you'll install/upgrade them yourself"}
+    - Vundle requires more `~/.vimrc` modifications
+    - {level: 2, text: "But manages installation/upgrades inside Vim"}
+    - I use Vundle, but it's just a preference
