@@ -1,5 +1,6 @@
 ---
 type: file
+position: 8
 actions:
     - ":echo 'hi'"
     - "\n"
