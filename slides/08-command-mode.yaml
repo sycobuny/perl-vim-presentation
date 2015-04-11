@@ -1,0 +1,10 @@
+---
+type: file
+actions:
+    - ":echo 'hi'"
+    - "\n"
+    - ":let b:dcbpw = 'awesome'\n"
+    - ':echo "dcbpw? it''s " . b:dcbpw . "!"'
+    - "\n"
+    - ":read %"
+    - "\n"
