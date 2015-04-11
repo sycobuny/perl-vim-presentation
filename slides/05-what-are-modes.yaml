@@ -1,0 +1,9 @@
+---
+type: information
+title: So what does "Modal" mean, anyway?
+actions:
+    - Various "modes" of operation, like gears of a car
+    - {level: 2, text: '"Normal" mode'}
+    - {level: 2, text: '"Insert" mode'}
+    - {level: 2, text: '"Command" mode'}
+    - {level: 2, text: '"Visual" mode'}
