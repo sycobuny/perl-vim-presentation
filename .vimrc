@@ -11,8 +11,8 @@ hi NonText ctermfg=black
 " over-long lines, whichever this version of vim supports
 set textwidth=78
 
-au FileType *        set foldcolumn=2
-au FileType markdown set foldcolumn=8
+au FileType *        set foldcolumn=0
+au FileType markdown set foldcolumn=2
 
 au FileType *        hi ColorColumn term=reverse ctermbg=1
 au FileType *        hi FoldColumn  term=standout ctermfg=14 ctermbg=242
