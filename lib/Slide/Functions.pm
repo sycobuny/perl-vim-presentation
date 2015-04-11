@@ -11,7 +11,7 @@
     );
 
     our ($pause);
-    our ($typing) = '300m';
+    our ($typing) = '150m';
 
     # write a single character into the tmux session
     sub feedchar($) {
