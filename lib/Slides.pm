@@ -38,6 +38,14 @@
         rightnow("vi slides/current-slide.md" . ENTER);
     }
 
+    sub full_reset {
+        VIM::DoCommand('source controller.vim');
+        finish_presentation();
+        $slide = undef;
+
+        advance();
+    }
+
     sub ensure_started {
         unless (defined $slide) {
             start();

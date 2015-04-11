@@ -43,6 +43,10 @@ function! DisplaySlides()
     perl Slides::display_list();
 endfunction
 
+function! FullReset()
+    perl Slides::full_reset();
+endfunction
+
 function! GoToSlide()
     call inputsave()
     let slide = input('Enter Slide Number: ')
@@ -53,6 +57,8 @@ endfunction
 
 nmap <Right> :call Advance()<enter>
 nmap <Space> :call Advance()<enter>
+
+nmap <C-r> :call FullReset()<enter>
 
 nmap n :call Advance()      <enter>
 nmap l :call DisplaySlides()<enter>
