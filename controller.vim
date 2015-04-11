@@ -51,6 +51,9 @@ function! GoToSlide()
     perl Slides::go_to_slide(VIM::Eval('slide'))
 endfunction
 
+nmap <Right> :call Advance()<enter>
+nmap <Space> :call Advance()<enter>
+
 nmap n :call Advance()      <enter>
 nmap l :call DisplaySlides()<enter>
 nmap g :call GoToSlide()  <enter>
