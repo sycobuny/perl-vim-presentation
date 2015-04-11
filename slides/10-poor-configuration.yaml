@@ -1,0 +1,7 @@
+---
+type: file
+file: '10-poor-configuration.demo.pl'
+position: 6
+actions:
+    - "isub hello {\n"
+    - "\ei    print shift;\n}\e"

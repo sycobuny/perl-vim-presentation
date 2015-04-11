@@ -1,0 +1,8 @@
+---
+type: information
+title: ~/.vimrc
+actions:
+    - Loads automatically when present
+    - Fully script-capable
+    - Lots of examples online
+    - {level: 2, text: "Search GitHub for 'rcfiles' or 'dotfiles' repos"}

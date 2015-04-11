@@ -1,0 +1,14 @@
+---
+type: file
+actions:
+    - vlllll$
+    - "\e2GV"
+    - "\e5GV"
+    - "\e8GV"
+    - "\e11GV"
+    - {speed: fast, text: "\e:source %\n"}
+    - {speed: fast, text: "1GVGd:read slides/10-poor-configuration.demo.pl"}
+    - "\nkdd6Gisub hello {\n\tprint 'Hello, Vimrc'\n}\e"
+    - {speed: fast, text: ":setf perl\n:normal <<\n"}
+    - speed: fast,
+      text: ":set tabstop=8\n:set shiftwidth=8\n:set noexpandtab\n"
