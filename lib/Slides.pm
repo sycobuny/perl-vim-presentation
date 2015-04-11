@@ -47,6 +47,7 @@
 
     sub go_to_slide {
         ($slide) = @_;
+        $slide--; # we're expecting "Slide 1" to map to $indexes->[0]
 
         ensure_started();
 
@@ -77,7 +78,7 @@
             }
 
             $name =~ SLIDEFILE;
-            rightnow(sprintf('%02d. %s', $index, $1) . ENTER);
+            rightnow(sprintf('%02d. %s', ($index + 1), $1) . ENTER);
         }
         rightnow(ESC);
     }
