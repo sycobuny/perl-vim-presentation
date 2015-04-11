@@ -6,4 +6,3 @@ actions:
     - {level: 2, text: '"Normal" mode'}
     - {level: 2, text: '"Insert" mode'}
     - {level: 2, text: '"Command" mode'}
-    - {level: 2, text: '"Visual" mode'}
