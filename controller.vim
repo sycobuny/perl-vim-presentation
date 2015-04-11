@@ -39,7 +39,7 @@ function! Advance()
     perl Slides::advance()
 endfunction
 
-function! DisplaySlide()
+function! DisplaySlides()
     perl Slides::display_list();
 endfunction
 
