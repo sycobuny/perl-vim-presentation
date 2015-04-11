@@ -62,7 +62,7 @@
 
         Slide::clear_buffer();
         Slide::set_filetype('text');
-        slide()->reset();
+        slide()->reset;
 
         rightnow(INSERT);
 
@@ -73,7 +73,7 @@
                 rightnow('(*) ');
             }
             else {
-                rightnow('    ');
+                rightnow('( ) ');
             }
 
             $name =~ SLIDEFILE;
