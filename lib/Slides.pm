@@ -51,7 +51,7 @@
         ensure_started();
 
         foreach my $name (@{ $indexes }[$slide .. $#{ $indexes }]) {
-            $slides->{ $indexes->[$name] }->reset();
+            $slides->{ $name }->reset();
         }
 
         slide()->next;
