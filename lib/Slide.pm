@@ -6,7 +6,7 @@
     use strict;
 
     use File::Basename        qw(dirname);
-    use File::Spec::Functions qw(catfile rel2abs);
+    use File::Spec::Functions qw(catfile rel2abs abs2rel);
 
     use YAML qw(LoadFile);
 
@@ -38,11 +38,20 @@
             lead   => 1,
             spacer => 1,
         },
+
+        file => {
+            directory => SLIDEPATH,
+        },
     };
 
     use constant DEFAULT_INFO_ACTION => {
         type  => 'bullet',
         level => 1,
+    };
+
+    use constant DEFAULT_FILE_ACTION => {
+        type  => 'text',
+        speed => 'slow',
     };
 
     use constant BULLETS => [ qw(* - +) ];
@@ -101,6 +110,9 @@
         elsif ($contents->{type} eq 'information') {
             $self->parse_information_slide($new, $add);
         }
+        elsif ($contents->{type} eq 'file') {
+            $self->parse_file_slide($new, $add);
+        }
 
         $self;
     }
@@ -147,6 +159,60 @@
 
                 $text = INSERT. "$space$char $text" . ENTER . ESC;
                 $add->(sub { rightnow($text) });
+            }
+        }
+    }
+
+    sub parse_file_slide {
+        my ($self) = shift;
+        my ($new, $add) = @_;
+        my ($file);
+
+        if ($self->{contents}{file}) {
+            $file = catfile(@{ $self->{contents} }{qw(directory file)});
+        }
+        else {
+            my ($glob) = catfile($self->{contents}{directory}, $self->{name});
+            $glob =~ s/yaml$/demo\*/;
+            ($file) = glob($glob);
+        }
+
+        # typing out the full path is a real pain, even when the computer's
+        # doing it.
+        $file = abs2rel($file);
+
+        $new->();
+        $add->(sub { rightnow(ESC . ":e! $file" . ENTER) });
+
+        if (my $pos = $self->{contents}{position}) {
+            if (ref $pos) {
+                $add->(sub {
+                    rightnow($pos->{line} . 'G');
+                    rightnow($pos->{char} . '|');
+                });
+            }
+            else {
+                $add->(sub { rightnow($pos . 'G') });
+            }
+        }
+
+        foreach my $action (@{ $self->{contents}{actions} }) {
+            $new->();
+
+            if (ref $action) {
+                $action = { %{ &DEFAULT_FILE_ACTION }, %$action };
+            }
+            else {
+                $action = { %{ &DEFAULT_FILE_ACTION }, text => $action };
+            }
+
+            if ($action->{type} eq 'text') {
+                if ($action->{speed} eq 'slow') {
+                    $add->(sub { writestr($action->{text}) });
+                }
+                elsif ($action->{speed} eq 'fast') {
+                    $add->(sub { rightnow($action->{text}) });
+                }
             }
         }
     }
