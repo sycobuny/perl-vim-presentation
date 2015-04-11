@@ -1,0 +1,13 @@
+---
+type: information
+lead: 1
+title: What is VIM?
+spacer: 1
+actions:
+    - Modal Text Editor
+    - {level: 2, text: 'Inputting text isn''t just "type and go"'}
+    - Based on "vi", but with significant additions
+    - {level: 2, text: Syntax highlighting}
+    - {level: 2, text: And a full scripting language}
+    - {level: 3, text: Plenty of plugins as a result}
+    - {level: 3, text: 'Plus script bindings for Perl, Python, and Ruby'}

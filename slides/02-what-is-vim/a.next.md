@@ -1,1 +1,0 @@
-  * Modal Text Editor
