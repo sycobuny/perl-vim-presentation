@@ -3,6 +3,7 @@ type: information
 title: So what does "Modal" mean, anyway?
 actions:
     - Various "modes" of operation, like gears of a car
-    - {level: 2, text: '"Normal" mode'}
-    - {level: 2, text: '"Insert" mode'}
-    - {level: 2, text: '"Command" mode'}
+    - {level: 2, text: '"Normal" mode - Like neutral on steroids'}
+    - {level: 2, text: '"Insert" mode - When you write your code'}
+    - {level: 2, text: '"Command" mode - Complex actions'}
+    - {level: 2, text: And many others!}
