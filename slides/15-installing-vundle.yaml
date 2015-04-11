@@ -1,0 +1,14 @@
+---
+type: information
+title: Installing Vundle
+actions:
+    - Installation instructions on GitHub
+    - {level: 2, text: 'https://github.com/gmarik/Vundle.vim'}
+    - Initial install requires manual `git clone`
+    - {level: 2, text: "(So you need git installed)"}
+    - type: code
+      lang: bash
+      lines:
+          - git clone \
+          - "  https://github.com/gmarik/Vundle.vim.git \\"
+          - "  ~/.vim/bundle/Vundle.vim"

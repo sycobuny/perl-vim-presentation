@@ -1,0 +1,10 @@
+---
+type: file
+actions:
+    - V3j
+    - "\e8GV"
+    - "\ejV"
+    - "\ejV"
+    - "\e2jVG"
+    - {speed: fast, text: "\e:PluginInstall"}
+    - {speed: fast, text: "\e:PluginUpdate"}
