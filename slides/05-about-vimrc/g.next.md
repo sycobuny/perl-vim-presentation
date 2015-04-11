@@ -1,1 +1,0 @@
-    - `vim -u NONE` - Start with *no* configuration
