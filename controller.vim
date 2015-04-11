@@ -48,7 +48,7 @@ function! GoToSlide()
     let slide = input('Enter Slide Number: ')
     call inputrestore()
 
-    perl Slides::go_to_slide(VIM::Eval('slide'))
+    perl Slides::go_to_slide((VIM::Eval('slide'))[1])
 endfunction
 
 nmap <Right> :call Advance()<enter>
