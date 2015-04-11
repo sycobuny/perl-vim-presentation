@@ -5,10 +5,20 @@
     use warnings;
     use strict;
 
+    use File::Basename        qw(dirname);
+    use File::Spec::Functions qw(catfile rel2abs);
+
     use YAML qw(LoadFile);
 
     use Slide::Keys;
     use Slide::Functions;
+
+    # copied from Slides.pm cause Syntastic doesn't deal very well with the
+    # recursive module loading, and I didn't feel like figuring out a "proper"
+    # fix for that
+    use constant SLIDEPATH => catfile(
+        dirname(dirname(rel2abs(__FILE__))), 'slides'
+    );
 
     use constant GOTO_TOP  => ESC . '1G';
     use constant CLEAR_BUF => GOTO_TOP . 'VGd';
@@ -55,14 +65,15 @@
 
     sub new {
         my ($pkg)  = shift;
-        my ($yaml) = @_;
+        my ($file) = @_;
         my ($obj);
 
         $pkg = ref($pkg) || $pkg;
         $obj = bless({}, $pkg);
 
-        $obj->{yaml}     = $yaml;
-        $obj->{contents} = LoadFile($yaml);
+        $obj->{name}     = $file;
+        $obj->{yaml}     = catfile(SLIDEPATH, $file);
+        $obj->{contents} = LoadFile($obj->{yaml});
         $obj->{action}   = 0;
 
         $obj->parse_actions();

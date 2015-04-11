@@ -26,7 +26,7 @@
         $slides  = {};
         while (my $file = $dir->read) {
             if ($file =~ SLIDEFILE) {
-                $slides->{$file} = Slide->new(catfile(SLIDEPATH, $file));
+                $slides->{$file} = Slide->new($file);
             }
         }
 
