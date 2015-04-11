@@ -43,16 +43,16 @@ function! DisplaySlides()
     perl Slides::display_list();
 endfunction
 
-function! JumpToSlide()
+function! GoToSlide()
     call inputsave()
     let slide = input('Enter Slide Number: ')
     call inputrestore()
 
-    perl Slides::jump_to_slide(VIM::Eval('slide'))
+    perl Slides::go_to_slide(VIM::Eval('slide'))
 endfunction
 
 nmap n :call Advance()      <enter>
 nmap l :call DisplaySlides()<enter>
-nmap j :call JumpToSlide()  <enter>
+nmap g :call GoToSlide()  <enter>
 nmap k :perl Slide::Functions::feedchar('k')<Enter>
 nmap j :perl Slide::Functions::feedchar('j')<Enter>

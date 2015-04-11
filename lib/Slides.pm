@@ -45,7 +45,7 @@
         }
     }
 
-    sub jump_to_slide {
+    sub go_to_slide {
         ($slide) = @_;
 
         ensure_started();
