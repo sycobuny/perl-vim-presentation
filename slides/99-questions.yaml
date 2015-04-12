@@ -2,12 +2,12 @@
 type: title
 title: QUESTIONS?
 subtitles:
-    - "You can find this presentatation on [github][]."
-    - "You can find me on [twitter][]."
+    - "You can find this presentatation on [GitHub][]."
+    - "You can find me on [Twitter][]."
     - "[Baltimore Vim][] has a website of its very own!"
     - ""
     - "----"
     - ""
-    - "[github]:  https://github.com/sycobuny/perl-vim-presentation"
-    - "[twitter]: https://twitter.com/sycobuny"
+    - "[GitHub]:  https://github.com/sycobuny/perl-vim-presentation"
+    - "[Twitter]: https://twitter.com/sycobuny"
     - "[Baltimore Vim]: http://baltimorevim.org/"
