@@ -183,6 +183,7 @@ Stephen Belcher
 
   * [GitHub][]
   * [Twitter][]
+  * [Baltimore Vim][]
 
 Copyright and License
 =====================
@@ -191,7 +192,7 @@ tl;dr: Pretty much the [MIT License][].
 
 -----
 
-Copyright (c) 2013 Stephen Belcher
+Copyright (c) 2013-2015 Stephen Belcher
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of the software, documentation, and other content in this software repository
@@ -226,7 +227,8 @@ THE SOFTWARE.
 [SyntaxRange]:  http://www.vim.org/scripts/script.php?script_id=4168
 [snipMate]:     https://github.com/msanders/snipmate.vim
 
-[GitHub]:  https://github.com/sycobuny
-[Twitter]: https://twitter.com/sycobuny
+[GitHub]:        https://github.com/sycobuny
+[Twitter]:       https://twitter.com/sycobuny
+[Baltimore Vim]: http://baltimorevim.org
 
 [MIT License]: http://opensource.org/licenses/MIT
