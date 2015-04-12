@@ -1,2 +1,0 @@
-
-  * Inspired by TextMate "snippets"
