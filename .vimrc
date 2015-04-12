@@ -38,6 +38,8 @@ let g:markdown_fenced_languages = ['pod', 'perl', 'vim']
 
 " PLUGIN - Syntastic
 Bundle "scrooloose/syntastic"
+let g:syntastic_mode_map = { 'mode': 'active' }
+let g:syntastic_perl_lib_path = ['./lib']
 
 " PLUGIN - SyntaxRange
 Bundle "SyntaxRange"

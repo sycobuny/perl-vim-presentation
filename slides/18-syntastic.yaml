@@ -1,0 +1,9 @@
+---
+type: information
+title: Suggested Plugin: Syntastic
+actions:
+    - "`Plugin 'scrooloose/Syntastic'`"
+    - Inline warnings for syntax errors
+    - Very configurable
+    - level: 2
+      text: "`let g:syntastic_perl_lib_path = ['./lib', './lib/auto']`"

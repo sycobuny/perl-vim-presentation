@@ -1,0 +1,7 @@
+---
+type: information
+title: Suggested Plugin: perl-mauke
+actions:
+    - "`Plugin 'vim-scripts/perl-mauke.vim'`"
+    - Fixes a lot of edge cases in syntax processing
+    - {level: 2, text: "Cause perl is so easy to parse"}
